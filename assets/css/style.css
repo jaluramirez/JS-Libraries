@@ -1,0 +1,399 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 100;
+    background: #1C7C73;
+}
+
+header a {
+    font-family:'Space Mono',monospace;; 
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    color: #F5EFE3;
+    text-decoration: none;
+}
+
+header nav {
+    display: none;
+}
+
+header nav.slide{
+    transform:translateX(0);
+}
+
+header nav{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:250px;
+    height:100vh;
+    background:#1c7c7271;
+    padding:80px 20px;
+    transform:translateX(-100%);
+    transition:transform .3s ease;
+    z-index: 999;
+}
+
+header nav::before{
+    content:none;
+}
+
+header nav.slide::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    z-index:-1;
+}
+
+.logoHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+#burger{
+    z-index: 1000;
+}
+
+#burger .burgerline {
+    width: 20px;
+    height: 2px;
+    background-color: #F5EFE3;
+    margin: 6px 0;
+    border-radius: 2px;
+    transition: 0.3s ease;
+
+}
+
+#burger.active .burgerline:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+#burger.active .burgerline:nth-child(2){
+    opacity: 0;
+}
+
+#burger.active .burgerline:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.bmScroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
+h2{
+    font-family: 'Fraunces',serif;
+    font-size: 20px;
+    text-align: center;
+    color: #F5EFE3;
+}
+
+/* glide */
+.glide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.glide__track {
+    overflow: hidden;
+}
+
+.glide__slides {
+    margin: 0;
+    padding: 0;
+}
+
+.glide__slide {
+    width: 100%;
+    height: 100vh;
+}
+
+.glide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter:saturate(50%);
+}
+
+.glide__arrow{
+    background: none;
+    border: none;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    text-shadow: 10px 2px 10px rgba(39, 26, 26, 0.842);
+}
+
+.glide__arrows{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 120px;
+    z-index: 20;
+}
+
+.heroContent{
+    position:absolute; 
+    inset:0;
+    z-index:5;
+    display:flex; 
+    flex-direction:column; 
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+
+.heroTitle{
+    color:#F5EFE3;
+    font-family:'Fraunces',serif;
+    font-size:60px;
+    line-height: 1px;
+    font-weight:600;
+    text-shadow:0 2px 24px rgba(0, 0, 0, 0.616);
+    margin: 0;
+}
+
+.heroPH{
+    color:#E8703A;
+    font-family:'Fraunces',serif;
+    font-style: italic;
+    font-size:70px;
+    line-height: 1px;
+    font-weight:600;
+    text-shadow:0 2px 24px rgba(0, 0, 0, 0.986);
+    margin: 0;
+}
+
+
+
+/* gallery */
+#gallery{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-direction: column;
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.gallery-content{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding: 30px 0;
+}   
+
+#gallery img {
+    width: 300px;
+}
+
+/* granim */
+#gallery-gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+#footer{
+    background:#1C7C73;
+    color:white;
+    padding:60px 24px;
+}
+
+.footerContent{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.footerInfo h2{
+    font-family:'Fraunces', serif;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.footerInfo p{
+    color:#cbd5e1;
+}
+
+.footerForm{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.footerForm input,
+.footerForm textarea{
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    font-family:'Inter', sans-serif;
+}
+
+.footerForm button{
+    background:#E8703A;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.footerForm button:hover{
+    background:#d85f2d;
+}
+
+.footerCopy{
+    margin-top:40px;
+    text-align:center;
+    color:#94a3b8;
+    font-size:0.9rem;
+}
+
+
+/* Desktop */
+@media (min-width: 680px){
+    
+    #burger{
+        display:none;
+    }
+
+    header{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:100;
+
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+        padding:0 30px;
+        box-sizing:border-box;
+    }
+
+    header nav{
+        display:flex;
+        flex-direction:row;
+
+        position:static;
+
+        width:auto;
+        height:auto;
+
+        background:transparent;
+        padding:0;
+
+        transform:none;
+        transition:none;
+
+        gap:35px;
+    }
+
+    header a:hover{
+        font-style: italic;
+    }
+    
+    /* glide */
+    .glide {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .glide__slide img{
+        height:100vh; 
+        width:100%; 
+        overflow: hidden;
+    }
+
+    .glide__arrows {
+        gap: 150px;
+    }
+
+    .heroContent{
+        flex-direction:column; 
+        align-items: baseline;
+        padding-left: 100px;
+        gap:120px;
+    }
+
+    .heroTitle{
+        color:#F5EFE3;
+        font-family:'Fraunces',serif;
+        font-size:130px;
+        line-height: 1px;
+
+        text-shadow:0 2px 24px rgba(0, 0, 0, 0.986);
+        margin: 0;
+    }
+
+    .heroPH{
+        font-size:130px;
+        margin-top: 10px;
+ 
+    }
+
+    #gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    #gallery img {
+        width: 900px;
+    }
+
+    .footerContent{
+        width: 80%;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-start;
+    }
+
+    .footerInfo{
+        width:40%;
+    }
+
+    .footerForm{
+        width:50%;
+    }
+}
