@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>TravelPH</title>
+</head>
+<body>
+    <!-- Glide, AOS, Granim, Cleave JS libraries -->
+    <header>
+        <div class="logoHeader">
+            
+            <!-- for mobile -->
+            <div id="burger">
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+            </div>
+            <h2>TravelPH</h2>
+        </div>
+        
+        <nav>
+            <a href="">Why us</a>
+            <a href="#gallery">Discover PH</a>
+            <a href="#footer">Contact us</a>
+        </nav>
+
+    </header>
+    <main>
+        <!-- glide-->
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="./assets/images/mimaropa.jpg" alt="Mimaropa Island"></li>
+                    <li class="glide__slide"><img src="./assets/images/elnido.jpg" alt="El Nido, Palawan"></li>
+                    <li class="glide__slide"><img src="./assets/images/coron.jpg" alt="Coron, Palawan"></li>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+            </div>
+
+        </div>
+        <div class="heroContent">
+            <h1 class="heroTitle">More fun</h1>
+            <h1 class="heroTitle">in the</h1>
+            <h1 class="heroPH">Philippines</h1>
+        </div>
+        
+        <!-- AOS animation-->
+        <section id="gallery">
+
+            <!-- gradient animation-->
+            <canvas id="gallery-gradient"></canvas>
+
+            <div class="gallery-content">
+                <div data-aos="zoom-in-left">
+                    <img src="./assets/images/siargao.jpg" alt="Siargao Island">
+                </div>
+
+                <div data-aos="zoom-in-right">
+                    <img src="./assets/images/bohol.jpg" alt="Chocolate Hills in Bohol">
+                </div>
+
+                <div data-aos="zoom-in-left">
+                    <img src="./assets/images/boracay.jpg" alt="Boracay">
+                </div>
+
+                <div data-aos="zoom-in-right">
+                    <img src="./assets/images/oslob.jpg" alt="Oslob, Cebu">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footerContent">
+            <div class="footerInfo">
+                <h2>Reach out to us!</h2>
+            </div>
+
+            <form class="footerForm">
+                <input type="text" placeholder="Full Name" required>
+                <!-- cleave -->
+                <input type="tel" id="phone" placeholder="Phone Number">
+
+                <input type="email" placeholder="Email Address" required>
+                <!-- cleave -->
+                <input type="text" id="travel-date" placeholder="Travel Date (YYYY-MM-DD)">
+
+                <textarea placeholder="Message" rows="4"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <p class="footerCopy">© 2026 TravelPH. All rights reserved.</p>
+    </footer>
+
+    <!-- scripts -->
+    <!-- glider js -->
+    <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <!-- AOS js -->
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <!-- gradient js -->
+    <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+     <!-- cleave js -->
+    <script src="./node_modules/cleave.js/dist/cleave.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1",
+    "aos": "^2.3.4",
+    "cleave-zen": "^0.0.17",
+    "cleave.js": "^1.6.0",
+    "lightbox2": "^2.12.0",
+    "masonry-layout": "^4.2.2"
+  },
+  "name": "js-lib",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
